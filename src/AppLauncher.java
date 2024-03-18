@@ -1,6 +1,7 @@
 import javax.swing.SwingUtilities;
 import assets.WeatherApp;
 
+
 public class AppLauncher {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -9,6 +10,7 @@ public class AppLauncher {
                 // display our app gui
                 new WeatherAppGui().setVisible(true);
                 // System.out.println(WeatherApp.getLocationData("Berlin"));
+                // System.out.println(WeatherApp.getCurrentTime());
             }
         });
     }
