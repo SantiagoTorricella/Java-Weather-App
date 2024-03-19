@@ -8,7 +8,7 @@ public class AppLauncher {
             @Override
             public void run(){
                 // display our app gui
-                new WeatherAppGui().setVisible(true);
+                 new WeatherAppGui().setVisible(true);
                 // System.out.println(WeatherApp.getLocationData("Berlin"));
                 // System.out.println(WeatherApp.getCurrentTime());
             }

@@ -1,4 +1,4 @@
-// return weather data from an API, the GUI will dusplay it to the user.
+// return weather data from an API, the GUI will display it to the user.
 
 package assets;
 
@@ -19,7 +19,7 @@ public class WeatherApp {
 
         // get location coordinates
         JSONArray locationData = getLocationData(locationName);
-
+        
         // take latitude and longitude of our location
         JSONObject location = (JSONObject) locationData.get(0);
         double latitude = (double) location.get("latitude");
@@ -61,17 +61,17 @@ public class WeatherApp {
             // get temperature
             JSONArray temperatureArray = (JSONArray) hourly.get("temperature_2m");
             double temperature = (double) temperatureArray.get(index);
-
             // weather code
-             JSONArray weatherCode = (JSONArray) hourly.get("weathercode");
-             String weatherCondition = convertWeatherCode((long) weatherCode.get(index));
+            
+            JSONArray weatherCode = (JSONArray) hourly.get("weather_code");
+            String weatherCondition = convertWeatherCode((long) weatherCode.get(index));
             
             // get humidity
-            JSONArray relativeHumidity = (JSONArray) hourly.get("relativehumidity_2m");
+            JSONArray relativeHumidity = (JSONArray) hourly.get("relative_humidity_2m");
             long humidity = (long) relativeHumidity.get(index);
 
             // windspeed
-            JSONArray windSpeedData = (JSONArray) hourly.get("windspeed_10m");
+            JSONArray windSpeedData = (JSONArray) hourly.get("wind_speed_10m");
             double windspeed = (double) windSpeedData.get(index);
 
             // create the json object that we use on the frontend

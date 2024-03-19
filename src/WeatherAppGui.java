@@ -139,6 +139,7 @@ private void addGuiComponents(){
             // update temperature text
             double temperaturex = (double) weatherData.get("temperature");
             temperature.setText(temperaturex + "C");
+            temperature.setBounds(0,350,450,54);
 
             // update weathercondition text
             weatherCondition.setText(weatherConditions);
