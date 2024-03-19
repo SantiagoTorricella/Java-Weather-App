@@ -89,7 +89,7 @@ private void addGuiComponents(){
     JLabel windSpeed = new JLabel(loadImage("src/assets/windspeed.png"));
     windSpeed.setBounds(220,500,75,65);
     add(windSpeed);
-    JLabel windSpeedText = new JLabel("<html><b>Windspeed:</b> <p>15km</p>/h</html>");
+    JLabel windSpeedText = new JLabel("<html><b>Windspeed:</b> <p>15km/h</p></html>");
     windSpeedText.setBounds(310,500,85,55);
     windSpeed.setFont(new Font("Dialog", Font.PLAIN,16));
     add(windSpeedText);
@@ -139,16 +139,16 @@ private void addGuiComponents(){
             // update temperature text
             double temperaturex = (double) weatherData.get("temperature");
             temperature.setText(temperaturex + "C");
-            temperature.setBounds(0,350,450,54);
+            
 
             // update weathercondition text
             weatherCondition.setText(weatherConditions);
 
             long humidityx = (long) weatherData.get("humidity");
-            humidityText.setText("<html><b>Humidity:</b>"+ humidityx + "%</html>");
+            humidityText.setText("<html><b>Humidity:</b>"+ "<p>" + humidityx + "%" + "</p>" + "</html>");
 
             double windSpeedx = (double) weatherData.get("windspeed");
-            windSpeedText.setText("<html><b>Windspeed:</b>" + windSpeedx + "<p>Km/h</p></html>");
+            windSpeedText.setText("<html><b>Windspeed:</b>" +  "<p>" + windSpeedx + "Km/h" +" </p></html>");
         }
     });
     add(searchButton);
